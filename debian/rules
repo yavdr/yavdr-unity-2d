@@ -1,0 +1,19 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+# we dont want to convert images to 8bit.
+# Ref.: https://bugs.launchpad.net/unity-2d/+bug/809205
+export NO_PNG_PKG_MANGLE=1
+
+override_dh_install:
+	find debian/tmp/usr/lib -name \*.*a -exec rm {} \;
+	dh_install --fail-missing
+
+override_dh_auto_test:
+	echo "Tests not working right now as no X server"
+
+%:
+	dh $@ --with translations
