@@ -1,4 +1,4 @@
-Source: unity-2d
+Source: yavdr-unity-2d
 Section: x11
 Priority: optional
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
@@ -28,14 +28,14 @@ Build-Depends: debhelper (>= 7.0.50~),
 Standards-Version: 3.9.2
 Vcs-Bzr: http://bazaar.launchpad.net/~unity-2d-team/unity-2d/oneiric
 
-Package: unity-2d
+Package: yavdr-unity-2d
 Architecture: all
 Depends: ${misc:Depends},
-         unity-2d-launcher,
-         unity-2d-panel,
-         unity-2d-places,
-         unity-2d-spread,
-         metacity (>= 2.30.3-0ubuntu5)
+         yavdr-unity-2d-launcher,
+         yavdr-unity-2d-panel,
+         yavdr-unity-2d-places,
+         yavdr-unity-2d-spread,
+         mutter
 Description: Unity interface for non-accelerated graphics cards
  The Unity 2D interface installs a fully usable 2D session and provides the 
  common configuration files and defaults. Installing this package will 
@@ -71,7 +71,7 @@ Description: Unity 2D shared library - development files
  .
  This package contains the development header files.
 
-Package: unity-2d-launcher
+Package: yavdr-unity-2d-launcher
 Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
@@ -87,7 +87,7 @@ Description: Unity 2D Launcher
  Notifications from individual applications are also highlighted in the
  launcher.
  
-Package: unity-2d-panel
+Package: yavdr-unity-2d-panel
 Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
@@ -104,7 +104,7 @@ Description: Unity 2D Panel
  various indicators. It is part of Unity 2D and can not run  as a standalone
  application outside of the Unity 2D environment.
 
-Package: unity-2d-places
+Package: yavdr-unity-2d-places
 Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
@@ -115,7 +115,7 @@ Description: Unity 2D Places
  various categories of applications. It is part of Unity 2D and can not run
  as a standalone application outside of the Unity 2D environment.
 
-Package: unity-2d-spread
+Package: yavdr-unity-2d-spread
 Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},

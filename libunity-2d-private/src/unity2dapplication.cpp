@@ -41,9 +41,6 @@
 #include <gtk/gtk.h>
 #include <pango/pango.h>
 
-static const char* A11Y_SCHEMA = "org.gnome.desktop.interface";
-static const char* A11Y_KEY = "toolkit-accessibility";
-
 ///////////////////////////////
 class PlatformFontTracker
 {
@@ -121,17 +118,6 @@ void Unity2dApplication::earlySetup(int& argc, char** argv)
     gtk_init(&argc, &argv);
 
     Unity2dDebug::installHandlers();
-
-    /* Enable a11y for all Unity 2d components.
-     * See https://bugs.launchpad.net/ubuntu/+source/qt-at-spi/+bug/877358
-     *
-     * Note: We cannot use the Qt bindings to dconf because it requires a
-     * QApplication object, which we don't have at this point.
-     */
-    GObjectScopedPointer<GSettings> settings(g_settings_new(A11Y_SCHEMA));
-    if (g_settings_get_boolean(settings.data(), A11Y_KEY)) {
-        qputenv("QT_ACCESSIBILITY", "1");
-    }
 
     /* When the environment variable QT_GRAPHICSSYSTEM is not set, force
      * graphics system to 'raster' instead of the default 'native' which on X11
