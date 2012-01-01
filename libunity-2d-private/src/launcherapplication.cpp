@@ -656,10 +656,6 @@ LauncherApplication::launch()
         return false;
     }
 
-    /* Disable a11y for child processes: it is just not stable enough.
-       See https://bugs.launchpad.net/ubuntu/+source/qt-at-spi/+bug/877358 */
-    unsetenv("QT_ACCESSIBILITY");
-
     GError* error = NULL;
 
     GdkWindow* root;
