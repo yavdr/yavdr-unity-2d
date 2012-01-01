@@ -36,6 +36,8 @@ Depends: ${misc:Depends},
          yavdr-unity-2d-places,
          yavdr-unity-2d-spread,
          mutter
+Conflicts: unity-2d
+Replaces: unity-2d
 Description: Unity interface for non-accelerated graphics cards
  The Unity 2D interface installs a fully usable 2D session and provides the 
  common configuration files and defaults. Installing this package will 
@@ -81,6 +83,8 @@ Depends: ${shlibs:Depends},
 Recommends: unity-lens-files,
             unity-lens-applications,
             unity-lens-music,
+Conflicts: unity-2d-launcher
+Replaces: unity-2d-launcher
 Description: Unity 2D Launcher
  The Unity 2D launcher displays a list of running applications as well as a
  list of favorite applications in a panel at the left of the screen.
@@ -99,6 +103,8 @@ Recommends: indicator-application,
             indicator-messages,
             indicator-session,
             indicator-sound,
+Conflicts: unity-2d-panel
+Replaces: unity-2d-panel
 Description: Unity 2D Panel
  The Unity 2D panel displays a top panel containing the application menu and
  various indicators. It is part of Unity 2D and can not run  as a standalone
@@ -110,6 +116,8 @@ Depends: ${shlibs:Depends},
          ${misc:Depends},
          libunity-2d-private0 (= ${binary:Version}),
          libqt4-svg
+Conflicts: unity-2d-places
+Replaces: unity-2d-places
 Description: Unity 2D Places
  The Unity 2D places overlay over the desktop to provide quick access to
  various categories of applications. It is part of Unity 2D and can not run
@@ -121,6 +129,8 @@ Depends: ${shlibs:Depends},
          ${misc:Depends},
          libunity-2d-private0 (= ${binary:Version}),
          libqt4-svg
+Conflicts: unity-2d-spread
+Replaces: unity-2d-spread
 Description: Unity 2D Spread
  The Unity 2D spread allows you to display a quick thumbnailed view of open
  windows so you can quickly and effectively choose which one you want to 
